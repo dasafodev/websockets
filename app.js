@@ -16,5 +16,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.get('/chat/api/messages', usersRouter);
+app.get('/chat/api/messages/:id', usersRouter);
+app.post('/chat/api/messages');
+app.put('/chat/api/messages');
+app.put('/chat/api/messages/:id');
 
 module.exports = app;
